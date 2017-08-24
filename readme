@@ -1,0 +1,38 @@
+GCC chord charts app
+written by Calvin
+
+
+================
+Models
+================
+
+Song:
+	the main container for everything related to one single song.
+	one Lyrics object, one Chords object for every Song
+
+Lyric:
+	the set of all lyrics sung in the song
+	one Lyrics object has many Line objects.
+	
+Line
+	a line of lyrics and chords in a song
+	one Song object has many Line objects
+
+Word:
+	one Word object for every word in a line of lyrics.
+	one Line has many Word objects.
+	words can be reused in other songs.
+
+Chord:
+	Chords in a song.
+	Associated with a word.
+	There are predetermined number of chords.
+	Chords can be represented in different ways. (Traditional vs. Simplified)
+	Chords can be transposed to different keys.
+
+Key:
+	The key that the song is played in.
+	Can be changed, and will result in the chords in the song being transposed.
+	Song will have a default key, and will be able to save to a different key.
+
+
